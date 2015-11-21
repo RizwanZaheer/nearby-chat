@@ -1,0 +1,27 @@
+﻿<ion-view view-title="Discover">
+    <ion-content>
+
+        <ion-list>
+            <ion-item ng-repeat="guest in guests">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="user-status" ng-class="{'user-status-online' : guest.status.online}">
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        {{guest.username}}
+                    </div>
+
+                    <div class="col">
+                        <button ng-click="chatWithGuest(guest)" ng-show="guest.status.online" class="button button-small button-balanced">
+                            Chat
+                        </button>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>
